@@ -1,0 +1,33 @@
+@import "var";
+button.icon {
+    outline: none;
+    display: block;
+    align-self: center;
+    padding: .5rem  1rem;
+    font-size: 1.25rem;
+    border: 1px solid $main-color;
+    border-radius: 0.3rem;
+
+    
+    &:hover, &.active {
+        color: white;
+        background-color: $main-color;
+
+    }
+
+}
+
+a.more {
+    display: inline-block;
+    color: white;
+    padding: .5rem 1rem;
+    font-weight: 900;
+    background-color: $main-color;
+
+    &:hover, &.active {
+        color: $main-color;
+        background-color: white;
+        outline: 1px solid $main-color;
+
+    }
+}
