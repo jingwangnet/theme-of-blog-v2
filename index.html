@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Grid layout</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -13,10 +12,11 @@
 
     <header role="banner">
         <h1><a href="/"  reole="home"><span class="jingwang">静网</span><span class="net">未来</span></a></h1>
-        <button class="icon">
-            <i class="fa fa-bars"></i>
+        <button class="icon" id="open">
+            &#9776;
         </button>
         <nav role="navigation" class="main-menu">
+            <button class="icon" id="close">&#10799;</button>
             <ul class="menu">
                 <li><a href="/">home</a></li>
                 <li><a href="/article">archive</a></li>
@@ -34,24 +34,15 @@
            <a class="more" href="detail.html">阅读更多</a>
         </article>
 
-        <article>
-           <h1 class="post-header">Lorem ipsum dolor sit amet.</h1>
-           <p class="post-meta"><a href="/date/1/">2019-10-11</a></p>
-           <p class="post-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, deserunt. Quos, sequi? Eum, asperiores impedit!</p>
-           <a class="more" href="detail.html">阅读更多</a>
-        </article>
-
-        <article>
-           <h1 class="post-header">Lorem ipsum dolor sit amet.</h1>
-           <p class="post-meta"><a href="/date/1/">2019-10-11</a></p>
-           <p class="post-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, deserunt. Quos, sequi? Eum, asperiores impedit!</p>
-           <a class="more" href="detail.html">阅读更多</a>
-        </article>
-
     </main>
     
     <aside>
-
+        <section>
+            aside 1
+        </section>
+        <section>
+            aside 1
+        </section>
     </aside>
 
     <footer role="contentinfo">

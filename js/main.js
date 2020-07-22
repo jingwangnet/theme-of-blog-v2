@@ -1,7 +1,8 @@
 window.onload = init()
 
 function init() {
-   toggleNav('.icon', '.main-menu'); 
+   toggleNav('#open', '.main-menu'); 
+   toggleNav('#close', '.main-menu'); 
 }
 
 function toggleNav(btnElement, navigation) {
@@ -10,6 +11,5 @@ function toggleNav(btnElement, navigation) {
 
     btn.addEventListener('click', function() {
         nav.classList.toggle('active')
-        btn.classList.toggle('active')
     })
 }
