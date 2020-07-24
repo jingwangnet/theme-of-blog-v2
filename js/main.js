@@ -2,7 +2,6 @@ window.onload = init()
 
 function init() {
    toggleNav('#open', '.main-menu'); 
-   toggleNav('#close', '.main-menu'); 
 }
 
 function toggleNav(btnElement, navigation) {

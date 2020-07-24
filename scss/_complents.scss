@@ -1,12 +1,14 @@
 @import "var";
+
 button.icon {
     outline: none;
     display: block;
     align-self: center;
-    padding: .5rem  1rem;
-    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
     border: 1px solid $main-color;
     border-radius: 0.3rem;
+    background: white;
 
     
     &:hover, &.active {
@@ -14,8 +16,8 @@ button.icon {
         background-color: $main-color;
 
     }
-
 }
+
 
 a.more {
     display: inline-block;

@@ -1,6 +1,7 @@
-@import 'complents';
-@import 'tag';
 @import 'var';
+@import 'tag';
+@import 'complents';
+@import 'mix';
 
 * {
     box-sizing: border-box;
@@ -22,8 +23,30 @@ html {
 
 body {
     display: grid;
-    grid-template-rows: auto 1fr auto auto;
+    grid-template-rows: auto 1fr  auto  auto;
+    grid-template-columns: auto 1fr auto;
     grid-gap: 1rem;
+    grid-template-areas:'header header header' 
+                        '. main .'
+                        '. aside .'
+                        'footer footer footer';
+
+    > header  {
+        grid-area: header;
+    }
+
+    > footer  {
+        grid-area: footer;
+    }
+
+    main  {
+        grid-area: main;
+
+    }
+    aside {
+        grid-area: aside;
+        align-self: start;
+    }
 
     > header {
         box-shadow: 0 .25rem .25rem rgba(0, 0, 0, 0.075) ;
@@ -42,6 +65,11 @@ body {
             }
         }
 
+        button#open{
+            z-index: 2;
+
+        }
+
  
 
         nav {
@@ -51,7 +79,7 @@ body {
             position: fixed;
             z-index: 1;
             top: 0;
-            left: 0;
+            right: 0;
             background-color: rgb(0,0,0);
             background-color: rgba(0,0,0, 0.9);
             transition: 0.5s;
@@ -62,7 +90,6 @@ body {
 
             a {
                 padding: 8px;
-                text-decoration: none;
                 font-size: 36px;
                 color: #818181;
                 display: block;
@@ -71,12 +98,6 @@ body {
                     color: $main-color;
                 }
 
-            }
-
-            button#close {
-                position: absolute;
-                top: 20px;
-                right: 1rem;
             }
 
             
@@ -103,5 +124,71 @@ body {
     footer {
         background-color: white;
         padding:1rem;
+    }
+}
+
+@include minw(760) {
+    body {
+        grid-template-rows: auto 1fr  auto;
+        grid-template-columns: auto 1fr .5fr auto;
+        grid-template-areas:'header header header header' 
+                            '. main  aside .'
+                            'footer footer footer footer';
+        > header {
+            button#open{
+                display: none;
+
+            }
+
+            h1 {
+                flex: 0 0 auto;
+            }
+            nav {
+                flex: auto;
+                position: static;
+                width: auto;
+                background-color: inherit;
+                ul {
+                    position: static;
+                    margin: 0;
+                    display: flex;
+                    justify-content: flex-end;
+                    li {
+                        a {
+                            font-size: 1.5rem;
+                            color: #818181;
+                            padding: .5rem 1rem;
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+
+@include minw(960) {
+    
+    body {
+        grid-template-rows: auto 1fr  auto;
+        grid-template-columns: 1fr  minmax(600px, max-content) minmax(300px, max-content) 1fr;
+        grid-template-areas:'header header header header' 
+                            '. main  aside .'
+                            'footer footer footer footer';
+
+    }
+}
+
+@include minw(1200) {
+    
+    body {
+        grid-template-rows: auto 1fr  auto;
+        grid-template-columns: 1fr  minmax(850px, max-content) minmax(300px, max-content) 1fr;
+        grid-template-areas:'. header header .' 
+                            '. main  aside .'
+                            '. footer footer .';
+
     }
 }
