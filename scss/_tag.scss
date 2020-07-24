@@ -32,7 +32,7 @@ a {
   text-decoration: none; 
   transition: .3s;
   &:hover {
-    color: darken($font-color,40); 
+    color: $main-color; 
   }
   &.active {
     color: $main-color; 
@@ -59,6 +59,10 @@ ul {
 ol {
   padding: 0;
   margin: 0; 
+}
+
+img {
+  max-width: 100%;
 }
 
 :focus { 

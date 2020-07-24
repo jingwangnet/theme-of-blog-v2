@@ -130,7 +130,7 @@ body {
 @include minw(760) {
     body {
         grid-template-rows: auto 1fr  auto;
-        grid-template-columns: auto 1fr .5fr auto;
+        grid-template-columns: auto 1fr  minmax(200px, .5fr) auto;
         grid-template-areas:'header header header header' 
                             '. main  aside .'
                             'footer footer footer footer';
@@ -173,7 +173,7 @@ body {
     
     body {
         grid-template-rows: auto 1fr  auto;
-        grid-template-columns: 1fr  minmax(600px, max-content) minmax(300px, max-content) 1fr;
+        grid-template-columns: 1fr  minmax(600px, max-content) minmax(250px, min-content) 1fr;
         grid-template-areas:'header header header header' 
                             '. main  aside .'
                             'footer footer footer footer';
@@ -185,7 +185,7 @@ body {
     
     body {
         grid-template-rows: auto 1fr  auto;
-        grid-template-columns: 1fr  minmax(850px, max-content) minmax(300px, max-content) 1fr;
+        grid-template-columns: 1fr  minmax(850px, max-content) minmax(250px, min-content) 1fr;
         grid-template-areas:'. header header .' 
                             '. main  aside .'
                             '. footer footer .';
