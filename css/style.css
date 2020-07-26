@@ -346,7 +346,9 @@ body aside {
 
 body aside > section {
   background-color: #e9ecef;
-  padding: 1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 body aside > section:not(:last-child) {
@@ -356,13 +358,15 @@ body aside > section:not(:last-child) {
 body aside #aside-info {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  padding: 1rem 0;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  justify-items: center;
   grid-gap: 1rem;
   background-color: white;
 }
@@ -372,6 +376,11 @@ body aside #aside-info figure {
   -ms-grid-column-align: center;
       justify-self: center;
   text-align: center;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
 }
 
 body aside #aside-info figure img {
@@ -380,6 +389,11 @@ body aside #aside-info figure img {
 }
 
 body aside #aside-info ul {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
   margin: 0;
 }
 
@@ -387,32 +401,38 @@ body aside #aside-info ul li {
   margin: .5rem 0;
 }
 
-body aside #aside-ad {
-  padding: 0;
-}
-
 body aside #aside-ad a {
   display: block;
 }
 
 @media (min-width: 47.5em) {
+  body aside section {
+    width: unset;
+  }
   body aside #aside-info {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
+    -ms-grid-columns: auto 1fr auto;
+        grid-template-columns: auto 1fr auto;
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    justify-items: center;
   }
   body aside #aside-info figure {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
   }
   body aside #aside-info ul {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
   }
 }
