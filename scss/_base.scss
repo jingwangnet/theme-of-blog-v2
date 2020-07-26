@@ -65,11 +65,6 @@ body {
             }
         }
 
-        button#open{
-            z-index: 2;
-
-        }
-
  
 
         nav {
@@ -100,7 +95,12 @@ body {
 
             }
 
-            
+            #close {
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+            }
+
             ul {
                 position: relative;
                 top: 25%;
@@ -135,7 +135,7 @@ body {
                             '. main  aside .'
                             'footer footer footer footer';
         > header {
-            button#open{
+            button.icon{
                 display: none;
 
             }

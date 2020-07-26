@@ -100,7 +100,7 @@ a.more:hover, a.more.active {
 
 .fas, .fab {
   display: inline-block;
-  width: 1.5rem;
+  width: 1.2rem;
   text-align: center;
 }
 
@@ -195,10 +195,6 @@ body > header > h1 a {
   font-size: 2rem;
 }
 
-body > header button#open {
-  z-index: 2;
-}
-
 body > header nav {
   height: 100%;
   width: 0;
@@ -228,6 +224,12 @@ body > header nav a:hover, body > header nav a:focus {
   color: #1080fb;
 }
 
+body > header nav #close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
 body > header nav ul {
   position: relative;
   top: 25%;
@@ -255,7 +257,7 @@ body footer {
         grid-template-columns: auto 1fr minmax(200px, 0.5fr) auto;
         grid-template-areas: 'header header header header'  '. main  aside .' 'footer footer footer footer';
   }
-  body > header button#open {
+  body > header button.icon {
     display: none;
   }
   body > header h1 {
