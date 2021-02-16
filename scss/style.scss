@@ -93,6 +93,14 @@ body {
 
 @include minw(760) {
     body {
+        main {
+            display: flex;
+            flex-direction: column;
+
+            div.paginator {
+                margin-top: auto;
+            }
+        }
         aside {
             section {
                 width: unset;
