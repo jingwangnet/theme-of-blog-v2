@@ -61,7 +61,10 @@ body {
             }
             align-self: center;
             a {
-               font-size: 2rem;
+                font-size: 2rem;
+                &:focus {
+                    outline: none;
+                }
             }
         }
 
