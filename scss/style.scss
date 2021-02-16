@@ -11,7 +11,7 @@ body {
             background-color: $background-color;
             padding: 1rem;
 
-            &:hover::before {
+            &.index:hover::before {
                 content: "";
                 position: absolute;
                 top: 0;
